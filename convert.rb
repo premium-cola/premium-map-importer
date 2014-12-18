@@ -49,10 +49,14 @@ RoleMap = Hash \
 
 # Group index => product
 ProductMap = Hash \
-  20 => :cola,
-  21 => :beer,
-  22 => [:cola, :beer],
-  23 => :coffee
+  2  => :Cola,
+  20 => :Cola,
+  21 => :Beer,
+  22 => [:Cola, :Beer],
+  28 => "Apfel-Holunder",
+  29 => :Frohlunder,
+  33 => :Muntermate
+  # 23 => "Premium-Kaffee" # Former
 
 # We hide some fields on speakers for privacy reasons
 SpeakerFields = Array.lit :surname, :lastname, :company,
