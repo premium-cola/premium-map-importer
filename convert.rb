@@ -28,15 +28,16 @@ end
 
 # Give all the fields to be imported sane, English names
 FieldMap = Hash \
-  Vorname: :surname,
-  Name:    :lastname,
+  Vorname: :first_name,
+  Name:    :last_name,
   Firma:   :company,
   Straße:  :street,
-  PLZ:     :plz,
+  PLZ:     :zipcode,
   Ort:     :city,
+  Land:    :country,
   Telefon: :telephone,
   Telefax: :fax,
-  Web:     :website,
+  Web:     :web,
   :"E-Mail" => :email,
   Inaktiv: :inactive, # We only store this to remove those
   Gruppen: :groups    # We remap those (csv in csv. really?)
@@ -89,7 +90,7 @@ def parse_row(row, csv_headers)
 
   # Parse the groups value and get rid of it
   gr = row[:groups].to_s.split(/[,.]/).map(&:to_i)
-  #row.delete :groups
+  row.delete :groups
 
   # Move the crazy groups value in two array fields:
   # products and roles
