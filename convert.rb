@@ -43,19 +43,19 @@ FieldMap = Hash \
 
 # Group index => role of the entity
 RoleMap = Hash \
-  7 => :Sprecher,
-  8 => :Händler_innen,
-  9 => :Läden
+  7 => :speaker,
+  8 => :merchant,
+  9 => :store
 
 # Group index => product
 ProductMap = Hash \
-  2  => :Cola,
-  20 => :Cola,
-  21 => :Beer,
-  22 => [:Cola, :Beer],
-  28 => "Apfel-Holunder",
-  29 => :Frohlunder,
-  33 => :Muntermate
+  2  => :cola,
+  20 => :cola,
+  21 => :beer,
+  22 => [:cola, :beer],
+  28 => :appleelder,
+  29 => :frohlunder,
+  33 => :muntermate
   # 23 => "Premium-Kaffee" # Former
 
 # We hide some fields on speakers for privacy reasons
