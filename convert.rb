@@ -36,7 +36,6 @@ FieldMap = Hash \
   Ort:     :city,
   Land:    :country,
   Telefon: :telephone,
-  Telefax: :fax,
   Web:     :web,
   :"E-Mail" => :email,
   Inaktiv: :inactive, # We only store this to remove those
