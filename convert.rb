@@ -105,7 +105,7 @@ def parse_row(row, csv_headers)
 
   # Speakers do not disclose their exact location
   if row[:roles] == [:speaker]
-    row.reject! {|k,v| SpeakerFields.include? k }
+    row.select! {|k,v| SpeakerFields.include? k }
   end
 
   row
