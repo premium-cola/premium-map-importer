@@ -61,7 +61,7 @@ ProductMap = Hash \
   # 23 => "Premium-Kaffee" # Former
 
 # We hide some fields on speakers for privacy reasons
-SpeakerFields = Array.lit :surname, :lastname, :company,
+SpeakerFields = Array.lit :first_name, :last_name, :company,
     :plz, :city, :telephone, :fax, :website, :email, :roles,
     :products
 
