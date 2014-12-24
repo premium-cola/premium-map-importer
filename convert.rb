@@ -1,3 +1,5 @@
+#! /usr/bin/env ruby
+
 require 'iconv'
 require 'csv'
 require 'json'
@@ -101,7 +103,8 @@ def parse_row(row, csv_headers)
       .map {|gi| RoleMap[gi] }
       .pluck(nil)
       .flatten
-  return nil if row[:roles].empty? || row[:products].empty?
+  return nil if row[:roles].empty?
+  row.delete(:products) if row[:products].empty?
 
   # Speakers do not disclose their exact location
   if row[:roles] == [:speaker]
