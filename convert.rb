@@ -46,8 +46,8 @@ FieldMap = Hash \
 # Group index => role of the entity
 RoleMap = Hash \
   7 => :speaker,
-  8 => :merchant,
-  9 => :store
+  9 => :store,
+  8 => :merchant
 
 # Group index => product
 ProductMap = Hash \
