@@ -86,7 +86,7 @@ def parse_row(row, csv_headers)
   end
 
   # Skip inactives
-  return nil if row[:inactive] != 0
+  return nil if row[:inactive].to_i != 0
   row.delete :inactive
 
   # Parse the groups value and get rid of it
@@ -117,7 +117,7 @@ def main
   txtin = Iconv.conv 'UTF-8', "latin1", STDIN.read
 
   # Parse the plain CSV (I mean semicolon separated *sigh*)
-  csv = CSV.parse txtin, col_sep: ';', converters: :numeric
+  csv = CSV.parse txtin, col_sep: ';'
   csv_header = csv.head
 
   # Now parse all the rows
