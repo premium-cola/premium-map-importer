@@ -93,6 +93,9 @@ def parse_row(row, csv_headers)
   gr = row[:groups].to_s.split(/[,.]/).map(&:to_i)
   row.delete :groups
 
+  # Ignore past partners
+  return nil if gr.include?(16) || gr.include?(17)
+
   # Move the crazy groups value in two array fields:
   # products and roles
   row[:products] = gr
